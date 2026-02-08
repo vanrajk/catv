@@ -133,9 +133,9 @@
 <!-- EDIT AREA MODAL -->
 <div class="modal fade" id="editAreaModal" tabindex="-1">
     <div class="modal-dialog">
-        <form method="POST" id="editAreaForm" class="modal-content">
+        <form method="POST" id="editAreaForm" class="modal-content">    
             @csrf
-            <!-- @method('PUT') -->
+            @method('PUT')
 
             <div class="modal-header">
                 <h5 class="modal-title">વિસ્તાર સુધારો</h5>
