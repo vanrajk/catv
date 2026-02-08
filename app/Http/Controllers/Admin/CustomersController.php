@@ -117,9 +117,9 @@
     // ✅ NORMAL FORM REQUEST
     return redirect()->back()->with('success', 'Customer updated successfully');
 }
-        public function destroy(Customers $Customers)
+        public function destroy(Customers $customer)
         {
-            $Customers->delete();
+            $customer->delete();
 
             return redirect()->back()->with('success', 'Customers deleted successfully');
         }
