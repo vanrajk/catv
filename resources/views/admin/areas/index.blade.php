@@ -45,8 +45,8 @@
                                     <button class="btn btn-sm btn-warning"
                                         onclick="editArea(
                                             {{ $area->id }},
-                                            {{ $area->zone_id }},
-                                            '{{ $area->name }}'
+                                            {{ $area->zone_id ?? ''}},
+                                            '{{ $area->name ?? '' }}'
                                         )">
                                         <i class="bi bi-pencil"></i>
                                     </button>
@@ -90,11 +90,11 @@
             <div class="modal-body">
 
                 <div class="mb-3">
-                    <label class="form-label">વિસ્તાર</label>
+                    <label class="form-label">ઝોન</label>
                     <select name="zone_id"
                             class="form-select @error('zone_id') is-invalid @enderror"
                             required>
-                        <option value="">વિસ્તાર પસંદ કરો</option>
+                        <option value="">ઝોન પસંદ કરો</option>
                         @foreach($zones as $zone)
                             <option value="{{ $zone->id }}"
                                 {{ old('zone_id') == $zone->id ? 'selected' : '' }}>
