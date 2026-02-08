@@ -39,8 +39,8 @@
                         @forelse($areas as $area)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $area->zone->name }}</td>
-                                <td>{{ $area->name }}</td>
+                                <td>{{ $area->zone->name ?? '' }}</td>
+                                <td>{{ $area->name ?? '' }}</td>
                                 <td>
                                     <button class="btn btn-sm btn-warning"
                                         onclick="editArea(
