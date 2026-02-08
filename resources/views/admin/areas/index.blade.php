@@ -45,8 +45,8 @@
                                     <button class="btn btn-sm btn-warning"
                                         onclick="editArea(
                                             {{ $area->id }},
-                                            {{ $area->zone_id ?? ''}},
-                                            '{{ $area->name ?? '' }}'
+                                            {{ $area->zone_id }},
+                                            '{{ $area->name  }}'
                                         )">
                                         <i class="bi bi-pencil"></i>
                                     </button>
